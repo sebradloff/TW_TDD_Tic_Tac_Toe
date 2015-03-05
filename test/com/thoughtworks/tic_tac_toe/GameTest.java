@@ -11,14 +11,15 @@ import static org.mockito.Mockito.verify;
 
 public class GameTest {
     private Board board = new Board(mock(PrintStream.class));
-    private Game game = new Game(board);
+//    private Game game = new Game(board);
 
     @Test
     public void shouldCallDrawBoardWhenStartIsCalled(){
-//        Board board1 = mock(Board.class);
+        Board board1 = mock(Board.class);
+        Game game1 = new Game(board1);
 
-        game.start();
+        game1.start();
 
-        verify(board, times(1)).drawBoard();
+        verify(board1, times(1)).drawBoard();
     }
 }
