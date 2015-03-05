@@ -33,15 +33,6 @@ public class GameTest {
         game =  new Game(board,printStream,reader, player1, player2);
     }
 
-   @Test
-   public void shouldCallDrawBoardWhenStartIsCalled() throws IOException {
-       Board board1 = mock(Board.class);
-       Game game1 = new Game(board1, printStream, reader, player1, player2);
-
-       game1.start();
-
-       verify(board1, times(1)).drawBoard();
-   }
 
     @Test
     public void shouldPromptPlayerToMakeTheFirstMove(){
