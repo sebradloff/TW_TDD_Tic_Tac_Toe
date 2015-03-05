@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         PrintStream printStream = new PrintStream(System.out);
         Board board = new Board(printStream);
-        Game game = new Game(board);
+        Game game = new Game(board, printStream);
         game.start();
     }
 }
