@@ -13,7 +13,7 @@ public class Main {
         Board board = new Board(printStream);
         Game game = new Game(board, printStream, reader);
         game.start();
-        game.promptUserToMakeMove();
-        game.getPlayerInput();
+        game.setNewPlayerMove();
+        game.drawBoard();
     }
 }

@@ -30,7 +30,7 @@ public class GameTest {
     }
 
     @Test
-    public void shouldCallDrawBoardWhenStartIsCalled(){
+    public void shouldCallDrawBoardWhenStartIsCalled() throws IOException {
         Board board1 = mock(Board.class);
         Game game1 = new Game(board1, printStream, reader);
 
@@ -47,10 +47,11 @@ public class GameTest {
         verify(printStream).println("Please enter a number between 1 and 9 to make a move:");
     }
 
-    @Test
-    public void shouldGetPlayerInput() throws IOException {
-        when(reader.readLine()).thenReturn("1");
 
-        assertThat(game.getPlayerInput(), is("1"));
+    @Test
+    public void shouldHaveXInCorrectSlot(){
+
+
+
     }
 }
