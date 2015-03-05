@@ -11,9 +11,18 @@ public class Main {
         PrintStream printStream = new PrintStream(System.out);
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Board board = new Board(printStream);
-        Game game = new Game(board, printStream, reader);
+        Player player1 = new Player("X");
+        Player player2 = new Player("O");
+        Game game = new Game(board, printStream, reader, player1, player2);
         game.start();
-        game.setNewPlayerMove();
+
+        boolean gameOver = false;
+
+        do {
+            game.nextTurn();
+            gameOver = game.isGameOver();
+        } while (gameOver == false);
+
         game.drawBoard();
     }
 }
