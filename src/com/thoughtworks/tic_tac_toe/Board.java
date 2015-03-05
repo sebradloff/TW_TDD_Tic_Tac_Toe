@@ -107,7 +107,7 @@ public class Board {
         return false;
     }
 
-    private boolean spotIsEmpty(int num1,int num2){
+    public boolean spotIsEmpty(int num1,int num2){
         if (slots[num1][num2] == " "){
             return true;
         }
